@@ -13,8 +13,8 @@ also  simulation and data plotter (currently disabled)
 
 ## Features
 - [x] record to SD card.
-- [x] Several recordslots available. slot 9 is for settings of max Speed, Acceleration, cyclic replay.
-- [x] steper motor output. Default is manual mode - move pot - motor meves according to it range
+- [x] Several record slots available. slot 9 is for settings of max Speed, Acceleration, cyclic replay.
+- [x] stepper motor output. Default is manual mode - move pot - motor meves according to it range
 - [ ] TODO PWM (i.e. dimmer) output
 - [ ] TODO WS2812b* output
 
@@ -22,16 +22,16 @@ also  simulation and data plotter (currently disabled)
 - [x] support some use of US-015 or other ultrasonic 
 
 ## hardware
-* ESP32 (support of atmega328 complately broken, if you want - i will fix it or upload last version with it working)
-* SD cart (support of EEPROM probably complately broken, if you want - i will fix it)
+* ESP32 (support of atmega328 completely broken, if you want - i will fix it or upload last version with it working)
+* SD cart (support of EEPROM probably completely broken, if you want - i will fix it)
 * OLED IIC 128*32
 
 ## TODO
 *upload video
 *wiring diagrams
 
-## connection scheematics
-![ESP32](ESP32-pin v0.51.png)
+## connection schematics
+![ESP32](ESP32_pin_v0.51.png)
 
 ## test results for stepper motor
 #### UNO+shield for 1 motor #define FastAccelStepper
@@ -45,7 +45,7 @@ up to 4000 steps /sec (1000 working good)
 
 
 #### ESP32 #define FastAccelStepper
-spped limited by acceleration.  acceleration limited by stepper driver. 35-90k steps/s achived with microsteps on NEMA17 good motor + A4988 driver without big motor load
+speed limited by acceleration.  acceleration limited by stepper driver. 35-90k steps/s achived with microsteps on NEMA17 good motor + A4988 driver without big motor load
 
 
 
