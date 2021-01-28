@@ -1,11 +1,15 @@
 # pot_recorder
 Record and play of potentiometer position and map  it to stepper motor position, LED dimmer or ws2812 
+Made for stepper motor but also suitable for dimmers, heaters, music, itc..
 
 ## Working:
-1. press REC
+1. start record
 2. move potentiometer or other input/sensor
-3. stop recording. 
-4. Play. 
+3. stop recording 
+4. Play
+### interactive GUI instruction,
+<https://pavel-b-kr12.github.io/recorder_for_potentiometer/index.htm>
+also  simulation and data plotter (currently disabled)
 
 ## Features
 - [x] record to SD card.
@@ -14,6 +18,7 @@ Record and play of potentiometer position and map  it to stepper motor position,
 - [ ] TODO PWM (i.e. dimmer) output
 - [ ] TODO WS2812b* output
 
+- [x] playback speed, pause 
 - [x] support some use of US-015 or other ultrasonic 
 
 ## hardware
@@ -23,9 +28,26 @@ Record and play of potentiometer position and map  it to stepper motor position,
 
 ## TODO
 *upload video
+*wiring diagrams
 
 ## connection scheematics
 ![ESP32](ESP32-pin v0.51.png)
+
+## test results for stepper motor
+#### UNO+shield for 1 motor #define FastAccelStepper
+
+up to 25k steps /sec (related to acceleration)
+
+
+#### UNO+CNC_shield_v3  do not //#define FastAccelStepper
+
+up to 4000 steps /sec (1000 working good)
+
+
+#### ESP32 #define FastAccelStepper
+spped limited by acceleration.  acceleration limited by stepper driver. 35-90k steps/s achived with microsteps on NEMA17 good motor + A4988 driver without big motor load
+
+
 
 
 
